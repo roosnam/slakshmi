@@ -4,9 +4,10 @@ date: 2020-03-08
 categories:
 - Vegan
 tags:
+- Dessert
 - Cupcake
 - Koramangala
-- ₹₹₹
+- Cost:₹₹₹
 series:
 - Vegan Options in Bangalore
 ---

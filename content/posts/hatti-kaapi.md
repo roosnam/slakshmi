@@ -8,7 +8,7 @@ tags:
 - Milkshake
 - Brownie
 - Indiranagar
-- ₹₹
+- Cost:₹₹
 series:
 - Vegan Options in Bangalore
 ---
