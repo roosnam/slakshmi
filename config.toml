@@ -1,0 +1,200 @@
+# Set base URL for site - should end with a trailing slash
+baseUrl = "https://example.org/"
+
+theme = "slick"
+
+# Site title (not shown if commented out or set to false)
+# (If you disable this, add some link on the index page inside menu.main,
+#  otherwise your visitors will get confused and lost...)
+title = "S Lakshmi"
+
+languageCode = "en"
+defaultContentLanguage = "en-us"
+
+# Will appear below the footer links with a © sign and the current year
+copyright = "S Lakshmi"
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true               # Allow html (needed for some shortcodes)
+    [markup.highlight]
+        codeFences = true               # Enable highlighting inside codefences
+        guessSyntax = true              # Highlight code without language tag
+        noClasses = false               # Use the theme's style sheet
+
+canonifyURLs = true
+preserveTaxonomyNames = true
+
+# Configure pagination
+paginate = 10
+paginatePath = "page"
+
+[params]
+    # Site subtitle (not shown if commented out or set to false)
+    subtitle = "My Vegan and Zero Waste Stories"
+
+    # Site description
+    description = "My Vegan and Zero Waste Stories" 
+
+    # Favicon file (relative to baseURL - place below static or assets folder)
+    favicon = "favicon.png"
+    # Custom css file (relative to baseURL - place below static or assets folder)
+    css = "custom.css"
+
+    # Define formatting of dates
+    # (optional, falls back to RFC822 format if not set)
+    # For reference to date and time formatting, see:
+    # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+    # Make sure to set showMetaDates to true to see any dates
+    dateFmt = "Mon, 02 Jan 2006"
+
+    # Customize the text of the 404 page here
+    errorPageText = "There's nothing to see here, please move along!"
+
+    # Header with title/subtitle can be disabled here.
+    # (If you disable this, add some link on the index page inside menu.main,
+    #  otherwise your visitors will get confused and lost...)
+    showNavHeader = true
+
+    # Decide if only summaries are shown on the main page or the full content
+    showFullContent = false
+
+    # If false no pagination is shown when there is nothing to paginate
+    showEmptyPagination = true
+
+    # If false the dates for the posts are not shown
+    showMetaDates = true
+
+    # If false the taxonomy links for the posts are not shown
+    showMetaLinks = true
+
+    # Uses Hugo internal templates if set
+    opengraph = false
+    schema = false
+    twitter_cards = false
+
+
+# Define all supported taxonomies (add series to the default)
+[taxonomies]
+    tags = "tags"
+    categories = "categories"
+    series = "series"
+
+
+[author]
+    name = "S Lakshmi"
+    email = "guddu1989@gmail.com"
+
+
+[imaging]
+# Default resample filter used for resizing. Default is Box,
+# a simple and fast averaging filter appropriate for downscaling.
+# See https://github.com/disintegration/imaging
+resampleFilter = "box"
+
+# Default JPEG quality setting. Default is 75.
+quality = 75
+
+# Anchor used when cropping pictures.
+# Default is "smart" which does Smart Cropping, using https://github.com/muesli/smartcrop
+# Smart Cropping is content aware and tries to find the best crop for each image.
+# Valid values are Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+anchor = "smart"
+
+# Default background color.
+# Hugo will preserve transparency for target formats that supports it,
+# but will fall back to this color for JPEG.
+# Expects a standard HEX color string with 3 or 6 digits.
+# See https://www.google.com/search?q=color+picker
+bgColor = "#ffffff"
+
+[imaging.exif]
+ # Regexp matching the fields you want to Exclude from the (massive) set of Exif info
+# available. As we cache this info to disk, this is for performance and
+# disk space reasons more than anything.
+# If you want it all, put ".*" in this config setting.
+# Note that if neither this or ExcludeFields is set, Hugo will return a small
+# default set.
+includeFields = ""
+
+# Regexp matching the Exif fields you want to exclude. This may be easier to use
+# than IncludeFields above, depending on what you want.
+excludeFields = ""
+
+# Hugo extracts the "photo taken" date/time into .Date by default.
+# Set this to true to turn it off.
+disableDate = false
+
+# Hugo extracts the "photo taken where" (GPS latitude and longitude) into
+# .Long and .Lat. Set this to true to turn it off.
+disableLatLong = false
+
+
+[menu]
+
+    # Configure main menu entries (header)
+    # Currently set to list all taxonomies and posts
+    [[menu.main]]
+        identifier = "post"
+        name = "Posts"
+        title = "All posts"
+        url = "/posts/"
+        weight = 1
+
+    [[menu.main]]
+        identifier = "categories"
+        name = "Categories"
+        title = "All categories"
+        url = "/categories/"
+        weight = 2
+
+    [[menu.main]]
+        identifier = "tags"
+        name = "Tags"
+        title = "All tags"
+        url = "/tags/"
+        weight = 2
+
+    [[menu.main]]
+        identifier = "series"
+        name = "Series"
+        title = "All series"
+        url = "/series/"
+        weight = 2
+
+
+    # Define the entries for post metadata
+    # Identifiers should match with the taxonomy entries
+    [[menu.meta]]
+        identifier = "categories"
+        name = "Categories"
+        weight = 1
+    [[menu.meta]]
+        identifier = "series"
+        name = "Series"
+        weight = 2
+    [[menu.meta]]
+        identifier = "tags"
+        name = "Tags"
+        weight = 3
+
+
+    # Add some footer links to your likings
+    [[menu.footer]]
+        name = "GitHub"
+        title = ""
+        url = "https://github.com/roosnam/slakshmi"
+        weight = 1
+
+    [[menu.footer]]
+        name = "Instagram"
+        title = ""
+        url = "https://www.instagram.com/zerowaste_vegan_desi/"
+        weight = 2
+
+    [[menu.footer]]
+        name = "Indiahikes"
+        title = ""
+        url = "https://indiahikes.com/author/lakshmi89/"
+        weight = 3
